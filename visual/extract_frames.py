@@ -25,7 +25,7 @@ while(True):
 
 	if ret: 
 		# if video is still left continue creating images 
-		name = './data/frame' + str(currentframe) + '.jpg'
+		name = './data/frameNEW' + str(currentframe) + '.png'
 		print ('Creating...' + name) 
 
 		# writing the extracted images 
