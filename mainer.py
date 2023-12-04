@@ -18,6 +18,11 @@ for file in os.listdir("data"):
   arr = []
   image = Image.open(f"data/{file}")
   pixels = image.load()
+  # If the pixel is black, add the pixel to the array
   for i, j, in pixels:
-    if pixels[i, j] == (0, 0, 0):
-      print("tes")
+    if pixels[i, j] == (0, 0, 0) or pixels[i, j] == (225, 255, 255):
+      arr.append((i, j))
+  print(arr)
+  with open("vectors.txt", "a") as f:
+    f.write(f"{arr}\n")
+  
