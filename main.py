@@ -26,13 +26,16 @@ for file in os.listdir("data"):
   for x in range(width):
     for y in range(height):  
       r, g, b = pixels[x, y]
-      if (r,g,b) == (255,255,255): 
+      if (r,g,b) >= (255/2,255/2,255/2): 
         currentFrameArray.append(0) 
       else: 
         currentFrameArray.append(1)
     framesDict[fileCounter] = currentFrameArray
   # If the pixel is black, add the pixel to the array
-with open("vectors.json", "w") as f:
+with open("frameArray.json", "w") as f:
   dump = json.dump(framesDict, f)
+  
+  
+
 
   
