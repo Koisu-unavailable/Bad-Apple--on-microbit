@@ -1,11 +1,10 @@
 from PIL import Image
 import os
 import json
+
 # Counters
-convertCounter = 0
 fileCounter = 0
-
-
+i = 0
 def convert():
   for file in os.listdir("data"):
     global i
@@ -14,7 +13,6 @@ def convert():
     new = image.resize((10, 10))
     new.save(f"data/framesNEWERRRR{i}.png")
     print(f"Succeessfully resized image{i}")
-
 framesDict = {}
 for file in os.listdir("data"):
   fileCounter += 1

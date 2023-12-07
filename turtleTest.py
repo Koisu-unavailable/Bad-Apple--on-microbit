@@ -7,7 +7,8 @@ class imageTester():
         pixels = test.load()
         for x in range(test.width):
             for y in range(test.height):
+                
                 pixels[x,y] = (255,255,255)
-                test.show()
+                
 test = imageTester()
     
